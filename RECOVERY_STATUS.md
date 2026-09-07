@@ -25,3 +25,7 @@ The original Rocket project source tree, package.json, React source components, 
 - Corrected project-relative home link on the sign-in page.
 - Corrected homepage links from old Rocket route suffixes to `/sign-up-login-screen/` and `/main-dashboard/`.
 - Cleaned remaining Next image-preload path remnants.
+
+
+## Demo authentication
+The sign-in page includes frontend-only demo account creation and sign-in. Accounts are stored in the browser localStorage and redirect to `../main-dashboard/`. No real server/database authentication is included.
