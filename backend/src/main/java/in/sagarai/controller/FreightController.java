@@ -1,0 +1,2 @@
+package in.sagarai.controller; import in.sagarai.entity.FreightQuote; import in.sagarai.service.FreightService; import org.springframework.web.bind.annotation.*; import java.util.List;
+@RestController @RequestMapping("/api/freight") public class FreightController { private final FreightService s; public FreightController(FreightService s){this.s=s;} @GetMapping("/quotes") public List<FreightQuote> all(){return s.all();} @PostMapping("/optimize") public FreightQuote optimize(@RequestBody FreightQuote q){return s.optimize(q);} }

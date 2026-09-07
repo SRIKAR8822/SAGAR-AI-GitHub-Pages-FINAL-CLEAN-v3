@@ -1,0 +1,1 @@
+package in.sagarai.repository; import in.sagarai.entity.FreightQuote; import org.springframework.data.jpa.repository.JpaRepository; public interface FreightQuoteRepository extends JpaRepository<FreightQuote,Long>{}

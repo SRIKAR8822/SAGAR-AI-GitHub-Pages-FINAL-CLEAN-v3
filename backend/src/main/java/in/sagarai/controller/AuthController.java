@@ -1,0 +1,2 @@
+package in.sagarai.controller; import in.sagarai.dto.*; import in.sagarai.service.AuthService; import jakarta.validation.Valid; import org.springframework.web.bind.annotation.*;
+@RestController @RequestMapping("/api/auth") public class AuthController { private final AuthService s; public AuthController(AuthService s){this.s=s;} @PostMapping("/register") public AuthResponse register(@Valid @RequestBody RegisterRequest r){return s.register(r);} @PostMapping("/login") public AuthResponse login(@Valid @RequestBody LoginRequest r){return s.login(r);} }

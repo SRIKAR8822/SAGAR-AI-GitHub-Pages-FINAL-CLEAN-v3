@@ -1,0 +1,2 @@
+package in.sagarai.controller; import in.sagarai.entity.Port; import in.sagarai.repository.PortRepository; import org.springframework.web.bind.annotation.*; import java.util.List;
+@RestController @RequestMapping("/api/ports") public class PortController { private final PortRepository r; public PortController(PortRepository r){this.r=r;} @GetMapping public List<Port> all(){return r.findAll();} @PostMapping public Port create(@RequestBody Port p){return r.save(p);} }
