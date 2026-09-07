@@ -1,0 +1,20 @@
+# Recovery status
+
+## Included
+- Captured landing-page HTML snapshot
+- Captured CSS
+- Captured JavaScript chunks loaded by the preview
+- Captured font files
+- Recovered SAGAR AI logo image
+- Static HTML snapshots for `main-dashboard/` and `sign-up-login-screen/`
+- `.nojekyll` for GitHub Pages
+
+## Path corrections in this final package
+- Root `index.html`: `../_next/...` → `./_next/...`
+- Root `index.html`: `../assets/...` → `./assets/...`
+- Root internal route links point to `./main-dashboard/` and `./sign-up-login-screen/`
+- Captured Next Image optimizer URLs for the app logo are replaced with the recovered local logo file
+- Nested route pages retain `../_next/...` because they are under their own route directories
+
+## Not recoverable from the HAR
+The original Rocket project source tree, package.json, React source components, and certain route-specific JS response bodies were not present in the captured response bodies. Those cannot be recreated faithfully from the HAR alone.
