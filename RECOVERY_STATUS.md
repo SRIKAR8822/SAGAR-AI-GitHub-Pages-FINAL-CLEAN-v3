@@ -18,3 +18,10 @@
 
 ## Not recoverable from the HAR
 The original Rocket project source tree, package.json, React source components, and certain route-specific JS response bodies were not present in the captured response bodies. Those cannot be recreated faithfully from the HAR alone.
+
+
+## v4 FINAL GitHub Pages path fix
+- Removed incorrect `<base>` tags from nested pages so relative CSS/JS/font/image paths resolve inside the project site.
+- Corrected project-relative home link on the sign-in page.
+- Corrected homepage links from old Rocket route suffixes to `/sign-up-login-screen/` and `/main-dashboard/`.
+- Cleaned remaining Next image-preload path remnants.
